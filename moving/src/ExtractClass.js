@@ -22,7 +22,6 @@ function DNI(aDNI) {
     this.DNI=aDNI;
 }
 
-
 function Persona() {
     this.name='';
     this.weight='';
@@ -38,6 +37,12 @@ function Persona() {
     this.getDNI = function() {
         return this.DNI.toString();
     };
+
+    this.computeLetter = function(DNI) {
+        var lastCharacterPosition = DNI.toString().length -1;
+        var letter = DNI.toString().charAt(lastCharacterPosition);
+        return letter;
+    }
 
     this.gainWeight=function(someKilos){};
 
